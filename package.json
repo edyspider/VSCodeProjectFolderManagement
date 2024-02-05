@@ -1,20 +1,43 @@
 {
-  "name": "VSCodeProjectFolderManagement",
-  "displayName": "VSCodeProjectFolderManagement",
-  "description": "Manage vscode projects folder structure",
+  "name": "vscodeprojectfoldermanagement",
+  "displayName": "VSCode Project Folder Management",
+  "description": "Create and manage VSCode projects folder structure",
+  "publisher": "EdySpider",
+	"icon": "logo/icon.png",
+	"author": {
+		"name": "EdySpider",
+		"url": "https://github.com/edyspider"
+	},
   "version": "0.0.1",
+  "license": "MIT",
   "engines": {
     "vscode": "^1.86.0"
   },
+  "bugs": {
+		"url": "https://github.com/edyspider/VSCodeProjectFolderManagement/issues"
+	},
+  "repository": {
+		"type": "git",
+		"url": "https://github.com/edyspider/VSCodeProjectFolderManagement"
+	},
   "categories": [
     "Other"
   ],
+  "keywords": [
+		"Folder",
+    "Folder Structure",
+    "Project",
+    "Project Folder",
+    "Project Management",
+    "Project Structure",
+		"Structure"
+	],
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "VSCodeProjectFolderManagement.helloWorld",
+        "command": "vscodeprojectfoldermanagement.helloWorld",
         "title": "Hello World"
       }
     ]
