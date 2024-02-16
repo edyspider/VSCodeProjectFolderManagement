@@ -1,17 +1,16 @@
 # Build and Release Folders
 bin-debug/
 bin-release/
-[Oo]bj/
-[Bb]in/
+node_modules/
+out/
+*/.vs/
 
 # Other files and folders
 .settings/
+.vscode*
 
 # Executables
-*.swf
-*.air
-*.ipa
-*.apk
+*.vsix
 
 # Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
 # should NOT be excluded as they contain compiler settings and other important

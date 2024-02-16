@@ -1,0 +1,142 @@
+{
+  "name": "vscodeprojectfoldermanagement",
+  "displayName": "VSCode Project Folder Management",
+  "description": "Create and manage VSCode projects folder structure",
+  "publisher": "EdySpider",
+	"icon": "logo/icon.png",
+	"author": {
+		"name": "EdySpider",
+		"url": "https://github.com/edyspider"
+	},
+  "version": "0.0.1",
+  "license": "MIT",
+  "bugs": {
+		"url": "https://github.com/edyspider/VSCodeProjectFolderManagement/issues"
+	},
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+		"Folder",
+    "Folder Structure",
+    "Project",
+    "Project Folder",
+    "Project Management",
+    "Project Structure",
+		"Structure"
+	],
+  "engines": {
+    "vscode": "^1.86.0"
+  },
+  "activationEvents": [
+    
+ ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "vscodeprojectfoldermanagement.manageFolderStructure",
+        "title": "ES: Generate Folder Structure"
+      }
+    ],
+    "configuration": [
+      {
+        "title": "VSCode Project Folder Management",
+        "properties": {
+          "vsCodeProjectFolderManagement.folderStructure": {
+            "type": "object",
+            "default": {
+              "projects": {
+                "typescript": {
+                  "folders": [
+                    {
+                      "name": "src",
+                      "subfolders": [
+                        "app",
+                        "styles",
+                        "assets"
+                      ]
+                    },
+                    {
+                      "name": "tests",
+                      "subfolders": [
+                        "unit",
+                        "integration"
+                      ]
+                    }
+                  ]
+                },
+                "python": {
+                  "folders": [
+                    {
+                      "name": "src",
+                      "subfolders": [
+                        "main",
+                        "tests"
+                      ]
+                    },
+                    {
+                      "name": "docs"
+                    }
+                  ]
+                },
+                "al": {
+                  "folders": [
+                      {
+                          "name": "logo"
+                      },
+                      {
+                          "name": "src",
+                          "subfolders": [
+                              "codeunit",
+                              "controladdin",
+                              "enum",
+                              "page",
+                              "permissionset",
+                              "report",
+                              "report/layout",
+                              "table"
+                          ]
+                      },
+                      {
+                          "name": "translations"
+                      }
+                  ]
+                }
+              }
+            },
+            "description": "Customize the folder structure for your projects."
+          }
+        }
+      }
+    ]
+  },
+  "files": [
+    "out",
+    "images",
+    "folderStructure.json"
+  ],
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.86.0",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3",
+    "@vscode/test-cli": "^0.0.4",
+    "@vscode/test-electron": "^2.3.8"
+  },
+  "repository": {
+		"type": "git",
+		"url": "https://github.com/edyspider/VSCodeProjectFolderManagement"
+	}
+}
