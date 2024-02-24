@@ -61,7 +61,9 @@
                       "name": "tests",
                       "subfolders": [
                         "unit",
-                        "integration"
+                        "integration/api",
+                        "integration/soap",
+                        "integration/soap/files"
                       ]
                     }
                   ]
