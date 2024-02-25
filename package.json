@@ -35,8 +35,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "vscodeprojectfoldermanagement.manageFolderStructure",
-        "title": "ES: Generate Folder Structure"
+        "command": "vscodeprojectfoldermanagement.createProjectFolderStructure",
+        "title": "ES-PFM: Create Project Folder Structure"
       }
     ],
     "configuration": [
@@ -52,18 +52,47 @@
                     {
                       "name": "src",
                       "subfolders": [
-                        "app",
-                        "styles",
-                        "assets"
+                        {
+                          "name": "app"
+                        },
+                        {
+                          "name": "styles"
+                        },
+                        {
+                          "name": "assets"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "img",
+                      "subfolders": "logo"
+                    },
+                    {
+                      "name": "out",
+                      "subfolders": [
+                        "test",
+                        "utils"
                       ]
                     },
                     {
                       "name": "tests",
                       "subfolders": [
-                        "unit",
-                        "integration/api",
-                        "integration/soap",
-                        "integration/soap/files"
+                        {
+                          "name": "unit"
+                        },
+                        {
+                          "name": "integration",
+                          "subfolders": [
+                            {
+                              "name": "files",
+                              "subfolders": [
+                                "1",
+                                "2",
+                                "3"
+                              ]
+                            }
+                          ]
+                        }
                       ]
                     }
                   ]
@@ -104,10 +133,16 @@
                           "name": "translations"
                       }
                   ]
-                }
+                },
+                "laravel": {}
               }
             },
             "description": "Customize the folder structure for your projects."
+          },
+          "vsCodeProjectFolderManagement.showDetailedLog": {
+            "type": "boolean",
+            "default": "true",
+            "description": "Show log for all folder creation."
           }
         }
       }
