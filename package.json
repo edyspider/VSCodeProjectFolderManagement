@@ -1,14 +1,14 @@
 {
   "name": "vscodeprojectfoldermanagement",
   "displayName": "VSCode Project Folder Management",
-  "description": "Create and manage VSCode projects folder structure",
+  "description": "Create and manage folder structures for VSCode projects.",
   "publisher": "EdySpider",
-	"icon": "logo/icon.png",
+	"icon": "img/icon.png",
 	"author": {
 		"name": "EdySpider",
 		"url": "https://github.com/edyspider"
 	},
-  "version": "0.0.1",
+  "version": "1.0.0",
   "license": "MIT",
   "bugs": {
 		"url": "https://github.com/edyspider/VSCodeProjectFolderManagement/issues"
@@ -21,6 +21,7 @@
     "Folder Structure",
     "Project",
     "Project Folder",
+    "Project Folder Structure",
     "Project Management",
     "Project Structure",
 		"Structure"
@@ -35,8 +36,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "vscodeprojectfoldermanagement.manageFolderStructure",
-        "title": "ES: Generate Folder Structure"
+        "command": "vscodeprojectfoldermanagement.createProjectFolderStructure",
+        "title": "ES-PFM: Create Project Folder Structure"
       }
     ],
     "configuration": [
@@ -50,24 +51,39 @@
                 "typescript": {
                   "folders": [
                     {
+                      "name": "node_modules"
+                    },
+                    {
                       "name": "src",
                       "subfolders": [
-                        "app",
-                        "styles",
-                        "assets"
+                        {
+                          "name": "app"
+                        },
+                        {
+                          "name": "assets"
+                        },
+                        {
+                          "name": "utils"
+                        }
                       ]
                     },
                     {
-                      "name": "tests",
+                      "name": "out",
                       "subfolders": [
-                        "unit",
-                        "integration"
+                        "test",
+                        "utils"
                       ]
+                    },
+                    {
+                      "name": "tests"
                     }
                   ]
                 },
                 "python": {
                   "folders": [
+                    {
+                      "name": "resources"
+                    },
                     {
                       "name": "src",
                       "subfolders": [
@@ -76,7 +92,7 @@
                       ]
                     },
                     {
-                      "name": "docs"
+                      "name": "templates"
                     }
                   ]
                 },
@@ -88,24 +104,81 @@
                       {
                           "name": "src",
                           "subfolders": [
-                              "codeunit",
-                              "controladdin",
-                              "enum",
-                              "page",
-                              "permissionset",
-                              "report",
-                              "report/layout",
-                              "table"
+                              {
+                                "name": "codeunit"
+                              },
+                              {
+                                "name": "controladdin"
+                              },
+                              {
+                                "name": "enum"
+                              },
+                              {
+                                "name": "page"
+                              },
+                              {
+                                "name": "permissionset"
+                              },
+                              {
+                                "name": "report",
+                                "subfolders": "layout"
+                              },
+                              {
+                                "name": "table"
+                              }
                           ]
                       },
                       {
                           "name": "translations"
                       }
                   ]
+                },
+                "html": {
+                  "folders": [
+                    {
+                      "name": "root",
+                      "subfolders": [
+                        "img",
+                        "scripts",
+                        "styles"
+                      ]
+                    }
+                  ]
+                },
+                "mvc": {
+                  "folders": [
+                    {
+                      "name": "content",
+                      "subfolders": [
+                        "img"
+                      ]
+                    },
+                    {
+                      "name": "controllers"
+                    },
+                    {
+                      "name": "models"
+                    },
+                    {
+                      "name": "scripts",
+                      "subfolders": [
+                        "css",
+                        "js"
+                      ]
+                    },
+                    {
+                      "name": "views"
+                    }
+                  ]
                 }
               }
             },
             "description": "Customize the folder structure for your projects."
+          },
+          "vsCodeProjectFolderManagement.showDetailedLog": {
+            "type": "boolean",
+            "default": "true",
+            "description": "Show log for all folder creation."
           }
         }
       }

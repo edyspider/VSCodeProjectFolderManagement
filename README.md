@@ -2,36 +2,56 @@
 
 ![VSCodeProjectFolderManagement](img/logo.png)
 
-Create and manage folder structure for all kind of vscode projects.
+<p align="center">
+  <a href="https://github.com/edyspider/VSCodeProjectFolderManagement/blob/master/LICENSE">
+    <img alt="License" src="https://img.shields.io/github/license/edyspider/vscodeprojectfoldermanagement">
+  </a>
+  <a href="https://marketplace.visualstudio.com/items?itemName=EdySpider.vscodeprojectfoldermanagement">
+    <img alt="Visual Studio Marketplace Installs" src="https://img.shields.io/visual-studio-marketplace/i/EdySpider.vscodeprojectfoldermanagement">
+  </a>
+  <a href="https://marketplace.visualstudio.com/items?itemName=EdySpider.vscodeprojectfoldermanagement">
+    <img alt="Visual Studio Marketplace Version" src="https://img.shields.io/visual-studio-marketplace/v/EdySpider.vscodeprojectfoldermanagement">
+  </a>
+  <a href="https://github.com/edyspider/VSCodeProjectFolderManagement/tags">
+    <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/edyspider/VSCodeProjectFolderManagement">
+  </a>
+  <a href="https://github.com/edyspider/VSCodeProjectFolderManagement/issues">
+    <img alt="GitHub issues" src="https://img.shields.io/github/issues/edyspider/VSCodeProjectFolderManagement">
+  </a>
+</p>
 
 ---
 
 ## Features
 
-This extension allows you to create and manage project folders structure for all kind of projects.
-You can set multiple folder structure that best suits you or your projects.
+This extension allows you to create and manage folders structures for VSCode projects.
+You can set multiple folder structure and several subfolder levels that best suits your needs.
+
+---
+
+## Requirements
+
+* `Visual Studio Code`.
 
 ---
 
 ## Settings
 
+* `vsCodeProjectFolderManagement.folderStructure`: This configuration allows you to define folder structure for different projects.
+
 ---
 
 ## Commands
+
+This extension contributes the following commands:
+
+* `ES-PFM: Create Project Folder Structure`: This command creates the folder structure for a VSCode project.
 
 ---
 
 ## Known Issues
 
----
-
-## Release Notes
-
----
-
-### Added Features
-
-### Removed Features
+There are no reported issues.
 
 ---
 
