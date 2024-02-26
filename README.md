@@ -38,6 +38,7 @@ You can set multiple folder structure and several subfolder levels that best sui
 ## Settings
 
 * `vsCodeProjectFolderManagement.folderStructure`: This configuration allows you to define folder structure for different projects.
+* `vsCodeProjectFolderManagement.showDetailedLog`: This configuration shows all the folders creation logs.
 
 ---
 
