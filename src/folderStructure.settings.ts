@@ -1,5 +1,5 @@
 import * as vscode from 'vscode';
-import { FolderStructure, ProjectConfig, ProjectFolder, Subfolder  } from './folderStructure.interfaces';
+import { FolderStructure, ProjectConfig  } from './folderStructure.interfaces';
 
 export class FolderStructureSettings {
     private static projectSettingsLabel = 'vsCodeProjectFolderManagement';

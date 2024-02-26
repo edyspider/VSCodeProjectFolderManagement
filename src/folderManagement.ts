@@ -1,11 +1,13 @@
 import fs = require('fs');
 import path = require('path');
 import { FolderStructureSettings } from './folderStructure.settings';
-import { FolderStructure, ProjectConfig, ProjectFolder, Subfolder  } from './folderStructure.interfaces';
+import { ProjectConfig, ProjectFolder, Subfolder  } from './folderStructure.interfaces';
 
 const vscode = require('vscode');
 
 export class FolderManagement {
+
+    declare useDetailLog: boolean;
     
     /**
      * Create folder structure for a pre-define (selected) project.
@@ -13,6 +15,7 @@ export class FolderManagement {
      */
     async createProjectStructure() {
         const folderStructure = FolderStructureSettings.GetFolderStructureConfig();
+        this.useDetailLog = FolderStructureSettings.ShowDetailedLog();
 
         // Check if exists folder structure and projects configured, otherwise do nothing 
         if (!folderStructure || !folderStructure.projects) {
@@ -59,7 +62,6 @@ export class FolderManagement {
      * @param rootPath 
      */
     processFolder(folder: ProjectFolder, rootPath: string) {
-        console.log(folder.name);
         // Get folder name
         const folderName = folder.name;
         
@@ -92,16 +94,12 @@ export class FolderManagement {
                 // Process subfolders if available
                 folder.subfolders.forEach((subfolder: Subfolder | string) => {
                     if (typeof subfolder === 'string') {
-                        console.log(subfolder);
-
                         // Create the full path to the desired folder
                         folderPath = path.join(rootPath, subfolder);
 
                         // Check if the folder exists, if not create it
                         this.checkAndOrCreateNewFolder(folderPath,subfolder);
-                    } else {
-                        console.log(subfolder.name);
-    
+                    } else {    
                         // Get subfolder name
                         const subfolderName = subfolder.name;
     
@@ -130,16 +128,19 @@ export class FolderManagement {
         if (!folderName) {
             folderName = folderPath;
         }
+
         // Check if the folder exists
         if (!fs.existsSync(folderPath)) {
             // If the folder doesn't exist, create it
             fs.mkdirSync(folderPath);
 
-            //vscode.window.createOutputChannel(`Folder '${folderName}' created successfully.`);
-            vscode.window.showInformationMessage(`Folder '${folderName}' created successfully.`);
+            if (this.useDetailLog) {
+                console.log(`Creating folder '${folderName}' in path: '${folderPath}'`);
+            }
         } else {
-            //vscode.window.createOutputChannel(`Folder '${folderName}' created successfully.`);
-            vscode.window.showInformationMessage(`Folder '${folderName}' created successfully.`);
+            if (this.useDetailLog) {
+                console.log(`Folder '${folderName}' already exists in path: '${folderPath}'`);
+            }
         }
     }
 }
