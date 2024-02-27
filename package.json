@@ -8,7 +8,7 @@
 		"name": "EdySpider",
 		"url": "https://github.com/edyspider"
 	},
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "bugs": {
 		"url": "https://github.com/edyspider/VSCodeProjectFolderManagement/issues"
@@ -108,7 +108,11 @@
                                 "name": "codeunit"
                               },
                               {
-                                "name": "controladdin"
+                                "name": "controladdin",
+                                "subfolders": [
+                                  "css",
+                                  "js"
+                                ]
                               },
                               {
                                 "name": "enum"
