@@ -1,6 +1,9 @@
-# VSCode Project Folder Management
+#
 
-![VSCodeProjectFolderManagement](img/logo.png)
+<p align="center">
+  <img width="" src="https://raw.githubusercontent.com/edyspider/VSCodeProjectFolderManagement/master/img/banner.png" align="center" alt="GitHub Readme Stats" />
+  <h1 align="center">VSCode Project Folder Management</h1>
+</p>
 
 <p align="center">
   <a href="https://github.com/edyspider/VSCodeProjectFolderManagement/blob/master/LICENSE">
@@ -24,8 +27,12 @@
 
 ## Features
 
-This extension allows you to create and manage folders structures for VSCode projects.
-You can set multiple folder structure and several subfolder levels that best suits your needs.
+This extension allows you to create and manage folder structures for VSCode projects.
+You can set multiple folder structures by defining **projects** and it is possible to define several subfolder layers that best suit your needs.
+
+![Projects configuration](img/content/projects-config.png)
+
+![Projects subfolders](img/content/projects-subfolders.png)
 
 ---
 
@@ -38,7 +45,7 @@ You can set multiple folder structure and several subfolder levels that best sui
 ## Settings
 
 * `vsCodeProjectFolderManagement.folderStructure`: This configuration allows you to define folder structure for different projects.
-* `vsCodeProjectFolderManagement.showDetailedLog`: This configuration shows all the folders creation logs.
+* `vsCodeProjectFolderManagement.showDetailedLog`: This configuration shows the creation log for all folders.
 
 ---
 
